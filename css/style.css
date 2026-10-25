@@ -153,3 +153,247 @@ ul {
   font-weight: 700;
 }
 
+/* ---------- 6. Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-outline {
+  border-color: #ffffff;
+  color: #ffffff;
+  margin-left: 0.5rem;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+.btn-small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-small:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- 7. Hero & page banner ---------- */
+.hero,
+.page-banner {
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero {
+  padding: 5rem 0;
+}
+
+.page-banner {
+  padding: 3rem 0;
+}
+
+.hero p,
+.page-banner p {
+  font-size: 1.15rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-date {
+  font-weight: 600;
+  color: #fde68a;
+}
+
+/* ---------- 8. Page layout (Flexbox main + aside) ---------- */
+.page-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.page-content {
+  flex: 3;
+  min-width: 0;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar h2 {
+  font-size: 1.3rem;
+}
+
+.info-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+/* ---------- 9. Figure ---------- */
+.feature-figure {
+  margin: 1.5rem 0 2rem;
+}
+
+.feature-figure img {
+  border-radius: var(--radius);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ---------- 10. Highlight cards & Flexbox event grid ---------- */
+.highlight-grid,
+.event-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  flex: 1 1 200px;
+  background-color: var(--surface);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.event-card {
+  flex: 1 1 calc(50% - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-card:hover,
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.event-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background-color: var(--border);
+}
+
+.event-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.event-body .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+  background-color: #dbeafe;
+  color: var(--primary-dark);
+}
+
+/* Attribute selectors: colour-code cards by data-category */
+.event-card[data-category="talk"] .tag {
+  background-color: #ede9fe;
+  color: #6d28d9;
+}
+
+.event-card[data-category="competition"] .tag {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+/* ---------- 11. Footer ---------- */
+.site-footer {
+  background-color: var(--text);
+  color: #d1d5db;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
