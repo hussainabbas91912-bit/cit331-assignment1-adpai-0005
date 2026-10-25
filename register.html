@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for Campus Tech Fest 2026 events.">
+  <title>Register | Campus Tech Fest 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Campus<span>Tech</span>Fest</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="register.html" class="active" aria-current="page">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="register">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Event Registration</h1>
+        <p>Fill in the form below. Your registration is saved in this browser.</p>
+      </div>
+    </section>
+
+    <div class="container page-layout">
+      <section class="page-content form-section" aria-labelledby="form-title">
+        <h2 id="form-title">Registration Form</h2>
+        <form id="registration-form" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Ali Khan" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" name="studentId" placeholder="e.g. FA23-BCS-001" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event">Event</label>
+            <select id="event" name="event" required>
+              <option value="">-- Select an event --</option>
+              <option value="Semantic HTML5 Fundamentals">Semantic HTML5 Fundamentals</option>
+              <option value="Flexbox &amp; Responsive Layouts">Flexbox &amp; Responsive Layouts</option>
+              <option value="Careers in Web Development">Careers in Web Development</option>
+              <option value="Version Control with Git">Version Control with Git</option>
+              <option value="24-Hour Hackathon">24-Hour Hackathon</option>
+              <option value="JavaScript in the Browser">JavaScript in the Browser</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Comments (optional)</label>
+            <textarea id="comments" name="comments" rows="3" placeholder="Anything we should know?"></textarea>
+          </div>
+
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+        </form>
+      </section>
+
+      <aside class="sidebar" aria-labelledby="help-title">
+        <h2 id="help-title">Need Help?</h2>
+        <p>All fields except comments are required. You can register for more than one event by submitting the form again.</p>
+        <p class="note">Registration closes on <time datetime="2026-12-01">1 December 2026</time>.</p>
+      </aside>
+    </div>
+
+    <section class="container entries-section" aria-labelledby="entries-title">
+      <div class="entries-header">
+        <h2 id="entries-title">Submitted Registrations (<span id="entry-count">0</span>)</h2>
+        <button type="button" id="clear-all" class="btn btn-danger">Clear All</button>
+      </div>
+      <div class="table-wrapper">
+        <table id="entries-table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Event</th>
+              <th scope="col">Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="entries-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-message" class="empty-message">No registrations yet. Submit the form above to add one.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <time datetime="2026">2026</time> Campus Tech Fest &middot; CIT331 Web Development Assignment</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
