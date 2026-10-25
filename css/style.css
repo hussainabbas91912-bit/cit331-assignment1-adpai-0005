@@ -397,3 +397,194 @@ figcaption {
   font-size: 0.9rem;
 }
 
+/* ---------- 12. Registration form ---------- */
+#registration-form {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Attribute selectors for form fields */
+input[type="text"],
+input[type="email"] {
+  height: 44px;
+}
+
+input[required],
+select[required] {
+  border-left: 4px solid var(--primary);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+}
+
+.form-message {
+  min-height: 1.5rem;
+  font-weight: 600;
+}
+
+.form-message.success { color: var(--success); }
+.form-message.error   { color: var(--danger); }
+
+/* ---------- 13. Entries table (ID selectors) ---------- */
+#register .entries-section {
+  padding-bottom: 2rem;
+}
+
+.entries-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.entries-header h2 {
+  margin-bottom: 0;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn-danger[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+#entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+#entries-table th,
+#entries-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+#entries-table th {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#entries-table tbody tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+#entries-table tbody tr:hover {
+  background-color: #dbeafe;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--muted);
+  padding: 1.5rem 0;
+}
+
+/* ---------- 14. Responsive design ---------- */
+@media (max-width: 768px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.45rem; }
+
+  /* Stack the header: logo above nav */
+  .header-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding: 3.5rem 0;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+
+  /* Main content and sidebar stack vertically */
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  /* Event cards become a single column */
+  .event-card {
+    flex-basis: 100%;
+  }
+
+  #registration-form {
+    padding: 1.25rem;
+  }
+
+  .entries-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
