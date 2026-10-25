@@ -91,3 +91,65 @@ ul {
   padding: 0 1.25rem;
 }
 
+/* ---------- 5. Header & Flexbox navigation ---------- */
+.site-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-nav a.active {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+/* Attribute selector: highlight the link for the current page */
+.main-nav a[aria-current="page"] {
+  font-weight: 700;
+}
+
