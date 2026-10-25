@@ -164,3 +164,20 @@ form.addEventListener("input", function (e) {
 
 // Show any previously saved entries when the page loads
 renderEntries();
+
+// ---------- Clear All ----------
+
+clearAllBtn.addEventListener("click", function () {
+  if (getEntries().length === 0) {
+    return;
+  }
+
+  const confirmed = window.confirm("Delete all saved registrations? This cannot be undone.");
+  if (!confirmed) {
+    return;
+  }
+
+  localStorage.removeItem(STORAGE_KEY);
+  renderEntries();
+  showMessage("All registrations have been cleared.", "success");
+});
